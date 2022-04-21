@@ -1,10 +1,11 @@
-import java.util.Scanner;
+
+
 class Main
 {
     public static void main(String[] args)
-    {          
+    {      
         
-        double Einsatz = 234.56;
+        double Einsatz = 23466.53;
         double counter500 = 0;
         double counter200 = 0;
         double counter100 = 0;
@@ -20,83 +21,95 @@ class Main
         double counter005= 0;
         double counter002= 0;
         double counter001= 0;
+        
         while (Einsatz>0.0)
         {
                 if(Einsatz>500.0)
                 {
-                    counter500 = Einsatz/500.0;
-                    Einsatz = Einsatz%500.0;
+                    counter500 = Math.floor(Einsatz/500.0);
+                    Einsatz = Math.round((Einsatz%500.0)*100.0)/100.0;
                     
                 }
                 else if(Einsatz>200.0)
                 {
-                    counter500 = Einsatz/200.0;
-                    Einsatz = Einsatz%200.0;
+                    counter200 = Math.floor(Einsatz/200.0);
+                  
+                    Einsatz =Math.round((Einsatz%200.0)*100.0)/100.0;
+                  
                 }
                 else if(Einsatz>100.0)
                 {
-                    counter500 = Einsatz/100.0;
-                    Einsatz = Einsatz%100.0;
+                    counter100 = Math.floor(Einsatz/100.0);
+                    Einsatz = Math.round((Einsatz%100.0)*100.0)/100.0;
                 }
                 else if(Einsatz>50.0)
                 {
-                    counter500 = Einsatz/50.0;
-                    Einsatz = Einsatz%50.0;
+                    counter50 = Math.floor(Einsatz/50.0);
+                    Einsatz = Math.round((Einsatz%50.0)*100.0)/100.0;
                 }
                 else if(Einsatz>20.0)
                 {
-                    counter500 = Einsatz/20.0;
-                    Einsatz = Einsatz%20.0;
+                    counter20 = Math.floor(Einsatz/20.0);
+                    Einsatz = Math.round((Einsatz%20.0)*100.0)/100.0;
+                  
                 }
                 else if(Einsatz>10.0)
                 {
-                    counter500 = Einsatz/10.0;
-                    Einsatz = Einsatz%10.0;
+                    counter10 = Math.floor(Einsatz/10.0);
+                    Einsatz = Math.round((Einsatz%10.0)*100.0)/100.0;
+                 
                 }
                 else if(Einsatz>5.0)
                 {
-                    counter500 = Einsatz/5.0;
-                    Einsatz = Einsatz%5.0;
+                    counter5 = Math.floor(Einsatz/5.0);
+                    Einsatz = Math.round((Einsatz%5.0)*100.0)/100.0;
                 }
                 else if(Einsatz>2.0)
                 {
-                    counter500 = Einsatz/2.0;
-                    Einsatz = Einsatz%2.0;
+                    counter2 = Math.floor(Einsatz/2.0);
+                    Einsatz = Math.round((Einsatz%2.0)*100.0)/100.0;
                 }
                 else if(Einsatz>1.0)
                 {
-                    counter500 = Einsatz/1.0;
-                    Einsatz = Einsatz%1.0;
+                    counter1 = Math.floor(Einsatz/1.0);
+                    Einsatz = Math.round((Einsatz%1.0)*100.0)/100.0;
                 }
                 else if(Einsatz>0.5)
                 {
-                    counter500 = Einsatz/0.5;
-                    Einsatz = Einsatz%0.5;
+                  
+                  counter050 = Math.floor(Einsatz/0.5);
+                    Einsatz = Math.round((Einsatz%0.5)*100.0)/100.0;
+                  
+                  
                 }
                 else if(Einsatz>0.2)
                 {
-                    counter500 = Einsatz/0.2;
-                    Einsatz = Einsatz%0.2;
+                    counter020 = Math.floor(Einsatz/0.2);
+                    Einsatz = Math.round((Einsatz%0.2)*100.0)/100.0;
                 }
                 else if(Einsatz>0.1)
                 {
-                    counter500 = Einsatz/0.1;
-                    Einsatz = Einsatz%0.1;
+                    counter010 = Math.floor(Einsatz/0.1);
+                    Einsatz = Math.round((Einsatz%0.1)*100.0)/100.0;
                 }
                 else if(Einsatz>0.05)
                 {
-                    counter500 = Einsatz/0.05;
-                    Einsatz = Einsatz%0.05;
+                    counter005 = Math.floor(Einsatz/0.05);
+                    Einsatz = Math.round((Einsatz%0.05)*100.0)/100.0;
                 }
                 else if(Einsatz>0.02)
                 {
-                    counter500 = Einsatz/0.02;
-                    Einsatz = Einsatz%0.02;
+                    counter002 =Math.floor(Einsatz/0.02);
+                    Einsatz = Math.round((Einsatz%0.02)*100.0)/100.0;
+                  
+                  
                 }
-                else if(Einsatz>0.01)
+                else if(Einsatz==0.01)
                 {
-                    counter500 = Einsatz/0.1;
-                    Einsatz = Einsatz%0.01;
+                    counter001 = 1.0;
+                   Einsatz = 0.0;
+                  
+                   
                 }
         }
         System.out.println("----------------");
@@ -115,11 +128,10 @@ class Main
         System.out.println("20-Cent Münzen: "+counter020);
         System.out.println("10-Cent Münzen: "+counter010);
         System.out.println("5-Cent Münzen: "+counter005);
-        System.out.println("2-Cent Münzen"+counter002);
-        System.out.println("1-Cent Münzen"+counter001);
-        }
+        System.out.println("2-Cent Münzen: "+counter002);
+        System.out.println("1-Cent Münzen: "+counter001);
         System.out.println("---------------------------");
 
-    }
-}
+        }
 
+    }
